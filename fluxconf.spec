@@ -6,7 +6,7 @@ Summary:	Fluxbox configurator
 Summary(pl):	Narzêdzie konfiguracyjne dla fluxboksa
 Name:		fluxconf
 Version:	0.9.7
-Release:	2
+Release:	3
 License:	GPL v2
 Vendor:		University of Freiburg / Germany
 Group:		X11/Window Managers/Tools
@@ -43,6 +43,9 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+ln -sf %{_bindir}/fluxconf $RPM_BUILD_ROOT%{_bindir}/fluxmenu
+ln -sf %{_bindir}/fluxconf $RPM_BUILD_ROOT%{_bindir}/fluxkeys
 
 %find_lang %{name}
 
