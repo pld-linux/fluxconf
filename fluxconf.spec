@@ -1,23 +1,23 @@
-Name:		fluxconf
 Summary:	Fluxbox configurator
-Summary(pl):	Narzêdzie konfiguracyjne dla fluxbox
+Summary(pl):	Narzêdzie konfiguracyjne dla fluxboksa
+Name:		fluxconf
 Version:	0.6
 Release:	1
-Group:		X11/Window Managers/Tools
 License:	GPL
-URL:		http://devaux.fabien.free.fr/flux/
 Vendor:		University of Freiburg / Germany
+Group:		X11/Window Managers/Tools
 Source0:	http://devaux.fabien.free.fr/flux/%{name}-%{version}.tar.bz2
-BuildRoot: 	%{tmpdir}/%{name}-%{version}-build-root-%(id -u -n)
+URL:		http://devaux.fabien.free.fr/flux/
 BuildRequires:  gtk+-devel
+BuildRoot: 	%{tmpdir}/%{name}-%{version}-build-root-%(id -u -n)
 
-%define 	_x11bindir	%{_prefix}/X11R6/bin
+%define 	_prefix		/usr/X11R6
 
 %description
-Fluxconf is a tool to configure Fluxbox
+Fluxconf is a tool to configure Fluxbox.
 
 %description -l pl
-Fluxconf jest narzêdziem s³u¿±cym do konfiguracji Fluxbox'a
+Fluxconf jest narzêdziem s³u¿±cym do konfiguracji Fluxboksa.
 
 %prep
 %setup -q 
@@ -28,17 +28,14 @@ Fluxconf jest narzêdziem s³u¿±cym do konfiguracji Fluxbox'a
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_x11bindir}
-install fluxconf $RPM_BUILD_ROOT%{_x11bindir}
-install fluxkeys $RPM_BUILD_ROOT%{_x11bindir}
-
-
-%files
-%defattr(644,root,root,755)
-#%doc src/*.gz
-%attr(755,root,root) %{_x11bindir}/fluxconf
-%attr(755,root,root) %{_x11bindir}/fluxkeys
-
+install -d $RPM_BUILD_ROOT%{_bindir}
+install fluxconf $RPM_BUILD_ROOT%{_bindir}
+install fluxkeys $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/fluxconf
+%attr(755,root,root) %{_bindir}/fluxkeys
