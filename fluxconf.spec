@@ -13,9 +13,9 @@ Group:		X11/Window Managers/Tools
 # Source0-md5:	48ec06a6fa0644ccd213fb79e7be151b
 Source0:	http://devaux.fabien.free.fr/flux/%{name}-%{version}.tar.gz
 URL:		http://devaux.fabien.free.fr/flux/
-BuildRequires:	gtk+-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gtk+-devel
 Requires:	fluxbox
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,7 +38,8 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
