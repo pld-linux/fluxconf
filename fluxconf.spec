@@ -16,7 +16,6 @@ BuildRequires:	gtk+-devel
 Requires:	fluxbox
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix		/usr/X11R6
 
 %description
 Fluxconf is a tool to configure Fluxbox.
