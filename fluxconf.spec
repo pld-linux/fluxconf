@@ -6,7 +6,7 @@ Summary:	Fluxbox configurator
 Summary(pl):	Narzêdzie konfiguracyjne dla fluxboksa
 Name:		fluxconf
 Version:	0.9.7
-Release:	1
+Release:	2
 License:	GPL v2
 Vendor:		University of Freiburg / Germany
 Group:		X11/Window Managers/Tools
@@ -16,6 +16,7 @@ Patch0:		%{name}-Makefile.patch
 URL:		http://devaux.fabien.free.fr/flux/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel
 Requires:	fluxbox
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -43,10 +44,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %doc AUTHORS ABOUT-NLS ChangeLog COPYING INSTALL NEWS README
