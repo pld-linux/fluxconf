@@ -12,9 +12,9 @@ Vendor:		University of Freiburg / Germany
 Group:		X11/Window Managers/Tools
 Source0:	http://devaux.fabien.free.fr/flux/%{name}-%{version}.tar.bz2
 URL:		http://devaux.fabien.free.fr/flux/
-BuildRequires:  gtk+-devel
+BuildRequires:	gtk+-devel
 Requires:	fluxbox
-BuildRoot: 	%{tmpdir}/%{name}-%{version}-build-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
 
@@ -25,7 +25,7 @@ Fluxconf is a tool to configure Fluxbox.
 Fluxconf jest narzêdziem s³u¿±cym do konfiguracji Fluxboksa.
 
 %prep
-%setup -q 
+%setup -q
 
 %build
 %{__make}
