@@ -11,6 +11,7 @@ License:	GPL
 Vendor:		University of Freiburg / Germany
 Group:		X11/Window Managers/Tools
 Source0:	http://devaux.fabien.free.fr/flux/%{name}-%{version}.tar.bz2
+# Source0-md5:	17099e2f6cb7206aac2a9f599b4c084b
 URL:		http://devaux.fabien.free.fr/flux/
 BuildRequires:	gtk+-devel
 Requires:	fluxbox
