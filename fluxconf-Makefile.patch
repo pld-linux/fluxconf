@@ -1,0 +1,34 @@
+--- fluxconf-0.9.4/Makefile.in.fix	2003-08-23 01:18:04.000000000 +0200
++++ fluxconf-0.9.4/Makefile.in	2003-08-23 01:26:35.000000000 +0200
+@@ -480,12 +480,9 @@
+ #fluxkeys: fluxconf
+ #	ln -sf fluxconf fluxkeys
+ install-exec-hook:
+-	@ln -sf $(bindir)/fluxconf $(bindir)/fluxkeys
+-	@ln -sf $(bindir)/fluxconf $(bindir)/fluxbare
+-	@if ldd fluxconf |grep pango > /dev/null ; then ln -sf $(bindir)/fluxconf $(bindir)/fluxmenu; fi
+ 	@for lan in ${ALL_LANG} ; do \
+-		${mkinstalldirs} $(datadir)/locale/$$lan/LC_MESSAGES; \
+-		${INSTALL} -m444 $(top_srcdir)/po/$$lan.mo $(datadir)/locale/$$lan/LC_MESSAGES/fluxconf.mo ;\
++		${mkinstalldirs} $(DESTDIR)$(datadir)/locale/$$lan/LC_MESSAGES; \
++		${INSTALL} -m444 $(top_srcdir)/po/$$lan.mo $(DESTDIR)$(datadir)/locale/$$lan/LC_MESSAGES/fluxconf.mo ;\
+ 	done ;
+ 
+ uninstall-local:
+--- fluxconf-0.9.4/Makefile.am.fix	2003-08-23 01:18:08.000000000 +0200
++++ fluxconf-0.9.4/Makefile.am	2003-08-23 01:27:59.000000000 +0200
+@@ -10,12 +10,9 @@
+ #fluxkeys: fluxconf
+ #	ln -sf fluxconf fluxkeys
+ install-exec-hook:
+-	@ln -sf $(bindir)/fluxconf $(bindir)/fluxkeys
+-	@ln -sf $(bindir)/fluxconf $(bindir)/fluxbare
+-	@if ldd fluxconf |grep pango > /dev/null ; then ln -sf $(bindir)/fluxconf $(bindir)/fluxmenu; fi
+ 	@for lan in ${ALL_LANG} ; do \
+-		${mkinstalldirs} $(datadir)/locale/$$lan/LC_MESSAGES; \
+-		${INSTALL} -m444 $(top_srcdir)/po/$$lan.mo $(datadir)/locale/$$lan/LC_MESSAGES/fluxconf.mo ;\
++		${mkinstalldirs} $(DESTDIR)$(datadir)/locale/$$lan/LC_MESSAGES; \
++		${INSTALL} -m444 $(top_srcdir)/po/$$lan.mo $(DESTDIR)$(datadir)/locale/$$lan/LC_MESSAGES/fluxconf.mo ;\
+ 	done ;
+ 
+ uninstall-local:
