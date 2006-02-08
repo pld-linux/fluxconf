@@ -5,13 +5,13 @@
 Summary:	Fluxbox configurator
 Summary(pl):	Narzêdzie konfiguracyjne dla fluxboksa
 Name:		fluxconf
-Version:	0.9.7
-Release:	3
+Version:	0.9.9
+Release:	1
 License:	GPL v2
 Vendor:		University of Freiburg / Germany
 Group:		X11/Window Managers/Tools
 Source0:	http://devaux.fabien.free.fr/flux/%{name}-%{version}.tar.gz
-# Source0-md5:	207faf932e07642c779e54aba549c804
+# Source0-md5:	ac37b12410daa06128f8eb29163a741d
 Patch0:		%{name}-Makefile.patch
 URL:		http://devaux.fabien.free.fr/flux/
 BuildRequires:	autoconf
