@@ -1,5 +1,5 @@
---- fluxconf-0.9.4/Makefile.in.fix	2003-08-23 01:18:04.000000000 +0200
-+++ fluxconf-0.9.4/Makefile.in	2003-08-23 01:26:35.000000000 +0200
+--- fluxconf-0.9.4/src/Makefile.in.fix	2003-08-23 01:18:04.000000000 +0200
++++ fluxconf-0.9.4/src/Makefile.in	2003-08-23 01:26:35.000000000 +0200
 @@ -480,12 +480,9 @@
  #fluxkeys: fluxconf
  #	ln -sf fluxconf fluxkeys
@@ -15,8 +15,8 @@
  	done ;
  
  uninstall-local:
---- fluxconf-0.9.4/Makefile.am.fix	2003-08-23 01:18:08.000000000 +0200
-+++ fluxconf-0.9.4/Makefile.am	2003-08-23 01:27:59.000000000 +0200
+--- fluxconf-0.9.4/src/Makefile.am.fix	2003-08-23 01:18:08.000000000 +0200
++++ fluxconf-0.9.4/src/Makefile.am	2003-08-23 01:27:59.000000000 +0200
 @@ -10,12 +10,9 @@
  #fluxkeys: fluxconf
  #	ln -sf fluxconf fluxkeys
