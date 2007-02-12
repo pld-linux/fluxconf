@@ -3,7 +3,7 @@
 # - add desktop file in Settings/.
 #
 Summary:	Fluxbox configurator
-Summary(pl):	Narzêdzie konfiguracyjne dla fluxboksa
+Summary(pl.UTF-8):   NarzÄ™dzie konfiguracyjne dla fluxboksa
 Name:		fluxconf
 Version:	0.9.9
 Release:	1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Fluxconf is a tool to configure Fluxbox.
 
-%description -l pl
-Fluxconf jest narzêdziem s³u¿±cym do konfiguracji Fluxboksa.
+%description -l pl.UTF-8
+Fluxconf jest narzÄ™dziem sÅ‚uÅ¼Ä…cym do konfiguracji Fluxboksa.
 
 %prep
 %setup -q
