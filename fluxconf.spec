@@ -3,7 +3,7 @@
 # - add desktop file in Settings/.
 #
 Summary:	Fluxbox configurator
-Summary(pl.UTF-8):   Narzędzie konfiguracyjne dla fluxboksa
+Summary(pl.UTF-8):	Narzędzie konfiguracyjne dla fluxboksa
 Name:		fluxconf
 Version:	0.9.9
 Release:	1
