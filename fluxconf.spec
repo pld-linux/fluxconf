@@ -33,6 +33,7 @@ Fluxconf jest narzędziem służącym do konfiguracji Fluxboksa.
 
 %build
 rm -f missing
+%{__gettextize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
