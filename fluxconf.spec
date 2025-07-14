@@ -29,7 +29,7 @@ Fluxconf jest narzędziem służącym do konfiguracji Fluxboksa.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 rm -f missing
